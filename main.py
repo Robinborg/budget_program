@@ -22,22 +22,18 @@ expense = pd.DataFrame(data, index=["First_week", "Second_week", "Third_week", "
 income = expense.copy()
 
 # expense['Januari'] = expense['Januari'].replace(['1'],'10')
-# print(expense)
-
-date_for_the_day = datetime.date.today()
-mothly_income = 1600
-# weeks = ['First_week', 'Second_week', 'Third_week', 'Fourth_week']
-
-def real_expenditure():
-    which_week = input("Which week is it:\n")
-    weekly_expenses = input("What did you spend this week:\n")
-
-     
-
-
-
-
-
-
-
-
+def choose_day(number_for_day):
+    choice_of_days = {
+     1:'Monday',        
+     2:'Tuesday',        
+     3:'Wednesday',        
+     4:'Thursday',       
+     5:'Friday',        
+     6:'Saturday',        
+     7:'Sunday',        
+    }    
+    return choice_of_days.get(number_for_day, "Invalid day")
+choose_day(4)
+if __name__ == '__main__':
+    print(choose_day(4))
+    print(choose_day(5))
